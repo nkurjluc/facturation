@@ -1,23 +1,21 @@
 package projetSpring.facturation;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class FacturationApplication implements CommandLineRunner{
+@ComponentScan( {"projetSpring.facturation"} )
+@EntityScan("projetSpring.facturation.entity.*")
 
-	@Autowired
-	private CustomProperties props;
-
+public class FacturationApplication{
+	
 	public static void main(String[] args) {
 		SpringApplication.run(FacturationApplication.class, args);
 	}
 
-	@Override
-	public void run(String ...args) throws Exception{
-		System.out.print(props.getApiUrl());
-	}
+	
 
 }
