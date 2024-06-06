@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import projetSpring.facturation.entity.FamilleEntity;
 
 @Repository
-public interface FamilleRepository extends JpaRepository<FamilleEntity,Long>{
-    
+public interface FamilleRepository extends JpaRepository <FamilleEntity,Long> {
+
 }

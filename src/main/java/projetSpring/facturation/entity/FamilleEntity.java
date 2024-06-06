@@ -2,20 +2,20 @@ package projetSpring.facturation.entity;
 
 
 
+import javax.persistence.Id;
+
+import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
 
 import lombok.Data;
-
 
 @Data
 @Entity
 @Table(name = "tbl_famille")
-
 public class FamilleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,5 +27,4 @@ public class FamilleEntity {
 
     @Column(name = "libelle", nullable = false,length = 255)
     private String libelle;
-
 }
