@@ -3,6 +3,7 @@ package projetSpring.facturation.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class FamilleController {
             if (familleDto.getCode().length() >10)   
                     return new ResponseEntity<>(new ResponseHelper(projetSpring.facturation.helper.MessageHelper.sizeExceed("Code", 0)), HttpStatus.BAD_REQUEST);             
                    
-                    FamilleDto dto = familleService.insertClasse(request, familleDto,jeton);
+                    FamilleDto dto = familleService.insertFamille(request, familleDto,jeton);
                     if (dto == null)                        
                         return new ResponseEntity<>(new ResponseHelper(MessageHelper.echec(), false),
                                                 HttpStatus.BAD_REQUEST);

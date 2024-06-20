@@ -17,10 +17,10 @@ public class FamilleServiceImpl implements FamilleService {
     private FamilleRepository familleRepository;
 
     @Override
-    public FamilleDto insertClasse(HttpServletRequest request, FamilleDto classeDto, String jeton) {
+    public FamilleDto insertFamille(HttpServletRequest request, FamilleDto familleDto, String jeton) {
 
         try {
-            FamilleEntity familleEntity = FamilleConvertDto.getInstance().toEntity(classeDto);
+            FamilleEntity familleEntity = FamilleConvertDto.getInstance().toEntity(familleDto);
 
             FamilleEntity famille = familleRepository.save(familleEntity);
 
@@ -31,5 +31,6 @@ public class FamilleServiceImpl implements FamilleService {
         
     
     }
+ 
 
 }
