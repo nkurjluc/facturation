@@ -24,7 +24,7 @@ public class FamilleController {
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
         public ResponseEntity<?> enregistrer(HttpServletRequest request, @RequestBody FamilleDto familleDto, @RequestHeader("Authorization") String jeton) {
-
+            System.out.println("Passe");
             if (familleDto.getCode().length() >10)   
                     return new ResponseEntity<>(new ResponseHelper(projetSpring.facturation.helper.MessageHelper.sizeExceed("Code", 0)), HttpStatus.BAD_REQUEST);             
                    
