@@ -9,5 +9,7 @@ import projetSpring.facturation.entity.FamilleEntity;
 
 @Repository
 public interface FamilleRepository extends JpaRepository <FamilleEntity,Long> {
+    public FamilleEntity findFamillyByCode(String code);
+    
 
 }

@@ -19,8 +19,8 @@ import lombok.Data;
 public class FamilleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(length = 11)
-    private Long id;
+    @Column(length = 10)
+    private long id;
 
     @Column(name = "code",nullable = false,length = 10)
     private String code;

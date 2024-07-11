@@ -23,14 +23,14 @@ public class FamilleConvertDto {
         return familleDto;
     }
 
-    public FamilleEntity toEntity(FamilleDto classeDto){
-        if(classeDto==null)
+    public FamilleEntity toEntity(FamilleDto familleDto){
+        if(familleDto==null)
             return null;
         else{
             FamilleEntity famille = new FamilleEntity();
-            famille.setId(classeDto.getId());
-            famille.setCode(classeDto.getCode());
-            famille.setLibelle(classeDto.getLibelle());
+            famille.setId(familleDto.getId());
+            famille.setCode(familleDto.getCode());
+            famille.setLibelle(familleDto.getLibelle());
 
             return famille;
         }
